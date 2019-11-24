@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.dashboard {
+  max-width: 1200px;
+  min-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

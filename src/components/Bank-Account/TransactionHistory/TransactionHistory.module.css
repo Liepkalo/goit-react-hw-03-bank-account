@@ -1,0 +1,26 @@
+.history {
+  margin-left: 100px;
+}
+
+th {
+  font-size: 13px;
+  font-family: 'HelveticaNeueCyr';
+  color: rgb(39, 39, 39);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.308;
+  background-color: rgb(235, 238, 242);
+}
+
+td {
+  min-width: 250px;
+  color: #696969;
+  border-bottom: 1px solid #eee;
+}
+
+th,
+td {
+  padding: 10px;
+  height: 20px;
+  text-align: center;
+}
