@@ -28,24 +28,17 @@ export default class Dashboard extends Component {
   };
 
   componentDidMount() {
-    const keptTransactions = localStorage.getItem('history');
-    const keptBalance = localStorage.getItem('balance');
-
-    if (keptTransactions) {
-      this.setState({ history: JSON.parse(keptTransactions) });
-    }
-    if (keptBalance) {
-      this.setState({ balance: JSON.parse(keptBalance) });
+    const inputItem = localStorage.getItem('transactions');
+    if (inputItem !== null) {
+      const item = JSON.parse(inputItem);
+      this.setState({ ...item });
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const { history, balance } = this.state;
+  componentDidUpdate(prevProp, prevState) {
+    const { history } = this.state;
     if (prevState.history !== history) {
-      localStorage.setItem('history', JSON.stringify(history));
-    }
-    if (prevState.balance !== balance) {
-      localStorage.setItem('balance', JSON.stringify(balance));
+      localStorage.setItem('transactions', JSON.stringify(this.state));
     }
   }
 
